@@ -2,9 +2,12 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 const PORT = process.env.PORT;
+const cors = require('cors');
 
 
 app.use(express.json());
+app.use(cors());
+app.use(express.static('public'))
 
 const selectionsRouter = require('./routes/selections');
 app.use('/selections', selectionsRouter);

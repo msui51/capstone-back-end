@@ -13,12 +13,11 @@ app.use(express.static('public'));
 const http= require('http');
 const { Server } = require('socket.io');
 const server = http.createServer(app);
-const io = new Server(server);
-// const io = new Server (server, {
-//     cors:{
-//         origin:'https://peppy-crumble-09a2e4.netlify.app/'
-//     }
-// });
+const io = new Server (server, {
+    cors:{
+        origin:'https://peppy-crumble-09a2e4.netlify.app/'
+    }
+});
 
 
 // connecting to the socket

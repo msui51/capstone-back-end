@@ -6,11 +6,11 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
-const { instrument } = require("@socket.io/admin-ui");
-instrument(io, {
-    auth: false,
-    mode: "development",
-  });
+// const { instrument } = require("@socket.io/admin-ui");
+// instrument(io, {
+//     auth: false,
+//     mode: "development",
+//   });
 
 
 // creating socket.io server

@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 require('dotenv').config();
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
 const cors = require('cors');
 app.use(cors());
 app.use(express.json());
@@ -63,6 +63,6 @@ app.use('/contact', contactRouter);
 
 // initiate back-end server
 
-server.listen(PORT, ()=>{
-    console.log(`running at localhost ${PORT}`);
+server.listen(process.env.PORT, ()=>{
+    console.log(`running at ${process.env.PORT}`);
 })
